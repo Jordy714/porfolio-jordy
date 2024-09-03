@@ -1,0 +1,224 @@
+---
+import AstroI from "./icons/AstroI.astro";
+import Css from "./icons/Css.astro";
+import Github from "./icons/Github.astro";
+import Html from "./icons/Html.astro";
+import Javascript from "./icons/Javascript.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import Python from "./icons/Python.astro";
+import Java from "./icons/Java.astro";
+import Angular from "./icons/Angular.astro";
+import AndroidStudio from "./icons/AndroidStudio.astro";
+import Linux from "./icons/Linux.astro";
+import Postgres from "./icons/Postgres.astro";
+import MySql from "./icons/MySql.astro";
+import Git from "./icons/Git.astro";
+import Kotlin from "./icons/Kotlin.astro";
+import Firebase from "./icons/Firebase.astro";
+import VSCode from "./icons/VSCode.astro";
+import TensorFlow from "./icons/TensorFlow.astro";
+import Notion from "./icons/Notion.astro";
+import Bash from "./icons/Bash.astro";
+import Php from "./icons/Php.astro";
+import React from "./icons/React.astro";
+const CONOCIMIENTOS = [
+    Css,
+    Github,
+    Html,
+    AstroI,
+    Javascript,
+    Tailwind,
+    Python,
+    Java,
+    Angular,
+    React,
+];
+const CONOCIMIENTOS2 = [
+    Linux,
+    Postgres,
+    MySql,
+    Git,
+    Kotlin,
+    Firebase,
+    VSCode,
+    TensorFlow,
+    Bash,
+    Php,
+];
+const CONOCIMIENTOSU = CONOCIMIENTOS.concat(CONOCIMIENTOS2);
+---
+
+<div class="carrusel rounded-3xl shadow-md flex">
+    <div class="carrusel-items">
+        {
+            CONOCIMIENTOS.map((CONOCIMIENTO) => (
+                <div class="carrusel-item">
+                    <CONOCIMIENTO class="size-12" />
+                </div>
+            ))
+        }
+    </div>
+    <div class="carrusel-items">
+        {
+            CONOCIMIENTOS.map((CONOCIMIENTO) => (
+                <div class="carrusel-item">
+                    <CONOCIMIENTO class="size-12" />
+                </div>
+            ))
+        }
+    </div>
+    <div class="carrusel-items">
+        {
+            CONOCIMIENTOS.map((CONOCIMIENTO) => (
+                <div class="carrusel-item">
+                    <CONOCIMIENTO class="size-12" />
+                </div>
+            ))
+        }
+    </div>
+</div>
+
+<div class="carrusel2 rounded-3xl shadow-md flex">
+    <div class="carrusel-items2">
+        {
+            CONOCIMIENTOS2.map((CONOCIMIENTO2) => (
+                <div class="carrusel-item2">
+                    <CONOCIMIENTO2 class="size-12" />
+                </div>
+            ))
+        }
+    </div>
+    <div class="carrusel-items2">
+        {
+            CONOCIMIENTOS2.map((CONOCIMIENTO2) => (
+                <div class="carrusel-item2">
+                    <CONOCIMIENTO2 class="size-12" />
+                </div>
+            ))
+        }
+    </div>
+    <div class="carrusel-items2">
+        {
+            CONOCIMIENTOS2.map((CONOCIMIENTO2) => (
+                <div class="carrusel-item2">
+                    <CONOCIMIENTO2 class="size-12" />
+                </div>
+            ))
+        }
+    </div>
+    <div class="carrusel-items2">
+        {
+            CONOCIMIENTOS2.map((CONOCIMIENTO2) => (
+                <div class="carrusel-item2">
+                    <CONOCIMIENTO2 class="size-12" />
+                </div>
+            ))
+        }
+    </div>
+</div>
+
+<style>
+    @keyframes desplazar-carrusel {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-100%);
+        }
+    }
+    @keyframes desplazar-carrusel2 {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    .carrusel {
+        overflow: hidden;
+        padding: 20px 0;
+        white-space: nowrap;
+        position: relative;
+    }
+    .carrusel2 {
+        overflow: hidden;
+        padding: 20px 0;
+        white-space: nowrap;
+        position: relative;
+    }
+    .carrusel-items {
+        display: flex;
+        animation: desplazar-carrusel 20s linear infinite;
+    }
+    .carrusel-items2 {
+        display: flex;
+        animation: desplazar-carrusel2 20s linear infinite;
+    }
+    .carrusel:hover .carrusel-items {
+        animation-play-state: paused;
+    }
+    .carrusel-item {
+        padding: 2px; /* Ajusta el espacio entre elementos */
+    }
+    .carrusel:before,
+    .carrusel:after {
+        position: absolute;
+        top: 0;
+        width: 90px;
+        height: 100%;
+        content: "";
+        z-index: 2;
+    }
+
+    .carrusel:before {
+        left: 0;
+        background: linear-gradient(
+            to left,
+            rgba(255, 255, 255, 0),
+            rgb(34, 13, 13)
+        );
+    }
+
+    .carrusel:after {
+        right: 0;
+        background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0),
+            rgb(34, 13, 13)
+        );
+    }
+    /* ESTIOLOS DOS*/
+    .carrusel2:hover .carrusel-items2 {
+        animation-play-state: paused;
+    }
+    .carrusel-item2 {
+        padding: 2px; /* Ajusta el espacio entre elementos */
+    }
+    .carrusel2:before,
+    .carrusel2:after {
+        position: absolute;
+        top: 0;
+        width: 90px;
+        height: 100%;
+        content: "";
+        z-index: 2;
+    }
+
+    .carrusel2:before {
+        left: 0;
+        background: linear-gradient(
+            to left,
+            rgba(255, 255, 255, 0),
+            rgb(34, 13, 13)
+        );
+    }
+
+    .carrusel2:after {
+        right: 0;
+        background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0),
+            rgb(34, 13, 13)
+        );
+    }
+</style>

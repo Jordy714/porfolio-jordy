@@ -1,0 +1,122 @@
+---
+import HtmlIcon from "./icons/Html.astro";
+import CssIcon from "./icons/Css.astro";
+import jsIcon from "./icons/Javascript.astro";
+import astroIcon from "./icons/AstroI.astro";
+import twIcon from "./icons/Tailwind.astro";
+import reactIcon from "./icons/React.astro";
+const TAGS = {
+    HTML: {
+        name: "HTML",
+        class: "bg-[#F07E2E] text-white/80",
+        icon: HtmlIcon,
+    },
+    CSS: {
+        name: "CSS",
+        class: "bg-white/90 text-blue-900  text-weight-900",
+        icon: CssIcon,
+    },
+    JAVASCRIPT: {
+        name: "JavaScript",
+        class: "bg-[#32419D] text-[#FFD700] text-weight-900",
+        icon: jsIcon,
+    },
+    ASTRO: {
+        name: "Astro",
+        class: "bg-[#5818F4] text-white text-weight-900",
+        icon: astroIcon,
+    },
+    TAILWIND: {
+        name: "Tailwind",
+        class: "bg-[rgb(30,41,59)] text-white text-weight-900",
+        icon: twIcon,
+    },
+        REACT: {
+        name: "React",
+        class: "bg-[rgb(208,91,227)] text-white text-weight-900",
+        icon: reactIcon,
+    },
+};
+const proyectos = [
+    {
+        title: "Inteligencia Artificial",
+        description:
+            "Una moto que usa IA para lograr pasar obstáculos. No se usa librerías externas solo JavaScript, basado en el codigo de Radu. ",
+        link: "https://jordy714.github.io/moto-IA-javascript-web/",
+        github: "",
+        image: "projects/svgl.webp",
+        tags: [TAGS.HTML, TAGS.JAVASCRIPT, TAGS.CSS],
+    },
+    {
+        title: "Carreras de Ingeniería",
+        description:
+            "Explora la plataforma para descubrir una amplia gama de opciones en el campo de la ingeniería en la Universidad Metropolitana de Quito",
+        link: "https://jordy714.github.io/FacultadDeIngenierias/",
+        github: "",
+        image: "projects/svgl2.webp",
+        tags: [TAGS.HTML, TAGS.JAVASCRIPT, TAGS.CSS],
+    },
+    {
+        title: "Porfolio Web J. Montero",
+        description:
+            "Este es el espacio donde comparto mi viaje en el mundo del desarrollo web, diseñado con Astro, Tailwind CSS y JavaScript.",
+        link: "#top",
+        github: "",
+        image: "projects/svgl3.webp",
+        tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.JAVASCRIPT],
+    },
+        {
+        title: "Porfolio Web J. Montero",
+        description:
+            "Aplicación en React, implementando buenas prácticas como el uso de componentes funcionales Context API para una gestión eficiente del estado.",
+        link: "#top",
+        github: "",
+        image: "projects/svgl4.webp",
+        tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.JAVASCRIPT],
+    },
+];
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+    {
+        proyectos.map(({ image, title, description, tags, link }) => (
+            <a
+                href={link}
+                class="rounded-md hover:scale-110 hover:bg-white/10 transition"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <div>
+                    <div class="p-2">
+                        <h3
+                            class="text-2xl text-bold mb-2 text-red-300 rounded-lg"
+                            style="background-color: rgba(32, 107, 244, 0.2)"
+                        >
+                            {title}
+                        </h3>
+                        <p class="text-gray-300/80 text-lg mb-4 text-pretty">
+                            {description}
+                        </p>
+                        <img
+                            class="h-auto max-w-full rounded-lg shadow-2xl shadow-white/10"
+                            src={image}
+                            alt={title}
+                        />
+                        <ul class="flex items-center mt-3 gap-x-4 flex-row">
+                            {tags.map((tag) => (
+                                <li>
+                                    <span
+                                        class={`flex gap-x-2 rounded-full text-xs font-black ${tag.class} py-1 px-2`}
+                                    >
+                                        <tag.icon class="size-4" />
+                                        {tag.name}
+                                    </span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+            </a>
+        ))
+    }
+</div>

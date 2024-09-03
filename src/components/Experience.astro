@@ -1,0 +1,35 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const experience = [
+        {
+        title: "Desarrollador movil - web",
+        description: "Desarrollar aplicaciones moviles y páginas web con equipo de desarrollo de manera ágil en Nexel Soluciones",
+        link: "",
+        date: "2020-2024",
+    },
+    {
+        title: "Inteligencia Artificial",
+        description: "Elaboración de un sistema de inteligencia artificial para el descubrimiento de péptidos antimicrobianos. Este proyecto forma parte de mi tesis de carrera y me ha permitido aplicar mis conocimientos y aprender sobre el desarrollo de algoritmos de deep learning para resolver problemas biológicos.",
+        link: "",
+        date: "2023-2024",
+        latest:"Latest"
+    },
+    {
+        title: "Movile-Device Testing",
+        description: "Pruebas de dispositivos móviles para la comprobación de la calidad garantizando que cumple todos los requisitos y especificaciones diseñados antes de su lanzamiento al mercado para su uso. Marquistech y MediaTek(tercerizado)",
+        date: "2021-2022",
+    },
+
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3.5">
+    {
+        experience.map(exp=> (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...exp} />
+            </li>
+        ))
+    }
+</ol>

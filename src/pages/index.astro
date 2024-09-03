@@ -1,0 +1,120 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import LinkedIn from "../components/icons/Linkedin.astro";
+import Github from "../components/icons/Github.astro";
+import Mail from "../components/icons/Mail.astro";
+import RedesSociales from "../components/RedesSociales.astro";
+import Experience from "../components/Experience.astro";
+import Section from "../components/Section.astro";
+import Case from "../components/icons/Case.astro";
+import Code from "../components/icons/Code.astro";
+import SobreJItem from "../components/icons/SobreJItem.astro";
+import Proyectos from "../components/Proyectos.astro";
+import SobreJ from "../components/SobreMi.astro";
+import Conocimientos from "../components/Conocimientos.astro";
+import Conocimiento from "../components/icons/Conocimiento.astro";
+import CV from "../components/icons/CV.astro";
+---
+
+<Layout
+	title="Porfolio de Jordy Montero - Desarrollador y Programador Ingeniero en Sistemas con +2 años de experiencia"
+	description=" Me especializo en crear soluciones tecnológicas innovadoras y eficientes para resolver desafíos complejos. En este porfolio, encontrarás una muestra de mi trabajo, que incluye proyectos en los que he participado, tecnologías con las que estoy familiarizado y experiencias que he adquirido a lo largo de mi carrera profesional. Desde aplicaciones web hasta sistemas de inteligencia artificial, mi objetivo es crear soluciones que impulsen el progreso y mejoren la vida de las personas."
+>
+	<main class="px-4">
+		<Section id="inicio" class="py-10 pd-22 md:py-40">
+			<div class="flex gap-4 mt-10 flex-wrap">
+				<img
+					class="rounded-full size-20 mb-10 shadow-2xl shadow-white/10"
+					src="JmFoto/asvgl.webp"
+					alt="Jordy"
+				/><a
+					href="https://www.linkedin.com/in/jordy-montero-murillo-6b36a8159"
+					target="_blank"
+					rel="noopener"
+					class="px-10 flex justify-center items-center"
+					><Badge>Open To Work</Badge></a
+				>
+			</div>
+			<h1
+				class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flew-row gap-x-4 pb-6 lg:pb-4"
+			>
+				Hola, soy Jordy
+			</h1>
+			<h2
+				class="mt-8 text-lg lg:text-xl max-w-[700px] opacity-80 text-pretty"
+			>
+				+3 años de experiencia. <span
+					class="text-blue-500 md:text-red-500"
+					>Ingeniero en Sistemas y desarrollador</span
+				>. De Quito, Ecuador 🇪🇨. Especializado en crear y mantener
+				aplicaciones de
+				<span class="text-yellow-400">calidad</span>.
+			</h2>
+			<nav class="flex gap-4 mt-10 flex-wrap">
+				<RedesSociales
+					href="https://www.linkedin.com/in/jordy-montero-murillo-6b36a8159"
+				>
+					<LinkedIn class="size-4 md:size-6" />
+					LinkedIn
+				</RedesSociales>
+				<RedesSociales href="https://github.com/Jordy714">
+					<Github class="size-4 md:size-6" />
+					Github
+				</RedesSociales>
+				<RedesSociales href="mailto:jordimontero01@gmail.com">
+					<Mail class="size-4 md:size-6" />
+					Contáctame
+				</RedesSociales>
+				<RedesSociales
+					href="public/CV/CV_Jordy.Montero.pdf"
+					download="CV_Jordy.Montero.pdf"
+				>
+					<CV class="size-4 md:size-6"/>
+					CV</RedesSociales
+				>
+			</nav>
+		</Section>
+
+		<Section id="experiencia">
+			<h2
+				class="text-2xl font-semibold mb-10 mt-20 flex gap-x-3 items-center"
+			>
+				<Case class="size-8" />
+				Experiencia Laboral
+			</h2>
+			<Experience />
+		</Section>
+		<Section id="proyectos">
+			<h2
+				class="text-2xl font-semibold mb-20 mt-40 flex gap-x-3 items-center"
+			>
+				<Code class="size-8" />
+				Proyectos
+			</h2>
+			<Proyectos />
+		</Section>
+		<Section id="conocimientos">
+			<h2
+				class="text-2xl font-semibold mb-20 mt-40 flex gap-x-3 items-center"
+			>
+				<Conocimiento class="size-8" />
+				Conocimientos
+			</h2>
+			<Conocimientos />
+		</Section>
+		<Section
+			id="sobre-mi"
+			data-section="sobre-mi"
+			class="section undefined scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl mt-40"
+		>
+			<h2
+				class="text-2xl font-semibold mb-20 mt-40 flex gap-x-3 items-center"
+			>
+				<SobreJItem class="size-8" />
+				Sobre Mí
+			</h2>
+			<SobreJ />
+		</Section>
+	</main>
+</Layout>

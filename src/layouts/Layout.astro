@@ -1,0 +1,66 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import "@fontsource/fira-mono";
+
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.webp" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<div
+			class="bg-[radial-gradient(circle_500px_at_50%_200px,#3e3e3e,transparent)]"
+		>
+		</div>
+		<Header />
+		<slot />
+		<Footer />
+	</body>
+
+	<style is:global>
+		:root {
+			color-scheme: dark;
+		}
+
+		html {
+			font-family: "Fira Mono", system-ui, sans-serif;
+			scroll-behavior: smooth;
+		}
+		body {
+			background: rgb(66, 64, 94);
+			background: radial-gradient(
+				circle,
+				rgba(66, 64, 94, 1) 0%,
+				rgba(57, 29, 32, 1) 0%,
+				rgba(46, 2, 7, 1) 25%,
+				rgba(54, 4, 14, 1) 50%,
+				rgba(16, 2, 57, 1) 70%,
+				rgba(3, 3, 38, 1) 74%,
+				rgba(45, 5, 17, 1) 74%,
+				rgba(34, 5, 57, 1) 100%
+			);
+			display: flex;
+			flex-direction: column;
+			min-height: 100vh;
+		}
+		@media (prefers-reduce-motion: reduce) {
+			html {
+				scroll-behavior: auto;
+			}
+		}
+	</style>
+</html>
