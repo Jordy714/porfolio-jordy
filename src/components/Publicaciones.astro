@@ -1,0 +1,23 @@
+---
+import PublicacionesItem from "./PublicacionesItem.astro";
+const publicaciones = [
+  {
+    title:
+      "CASE STUDY ON DATA SIMULATION FOR ACADEMIC RESEARCH USING GENERATIVE ARTIFICIAL INTE-LLIGENCE AND GOOGLE COLAB",
+    description:
+      "This case study presents data simulation for academic research using Generative Artificial Intelligence (GAI) and the ChatGPT model. Simulated data was generated through prompts and validated using Python in Google Colab. The methodology compares real and simulated data based on parameters like mean, standard deviation, and sample size. Libraries such as numpy, ttest_ind, matplotlib, and seaborn were used for statistical analysis and visualization. The results showed no significant statistical differences, demonstrating the effectiveness of the proposed methodology.",
+    link: "https://pablolatapisarre.edu.mx/revista/index.php/rmiie/article/view/143/124",
+    date: "april - 2025",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3.5">
+  {
+    publicaciones.map((exp) => (
+      <li class="mb-10 ms-4">
+        <PublicacionesItem {...exp} />
+      </li>
+    ))
+  }
+</ol>

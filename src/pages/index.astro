@@ -13,109 +13,110 @@ import SobreJItem from "../components/icons/SobreJItem.astro";
 import Proyectos from "../components/Proyectos.astro";
 import SobreJ from "../components/SobreMi.astro";
 import Conocimientos from "../components/Conocimientos.astro";
+import Publicaciones from "../components/Publicaciones.astro";
 import Conocimiento from "../components/icons/Conocimiento.astro";
 import CV from "../components/icons/CV.astro";
+import Publications from "../components/icons/Publications.astro";
 ---
 
 <Layout
-    title="Jordy Montero Portfolio - Developer and Systems Engineer with 3+ years of experience"
-    description="I specialize in creating innovative and efficient technological solutions to solve complex challenges. In this portfolio, you will find a showcase of my work, including projects I've been involved in, technologies I'm familiar with, and experiences I've gained throughout my professional career. From web applications to artificial intelligence systems, my goal is to create solutions that drive progress and improve people's lives."
+  title="Jordy Montero Portfolio - Developer and Systems Engineer with 3+ years of experience"
+  description="I specialize in creating innovative and efficient technological solutions to solve complex challenges. In this portfolio, you will find a showcase of my work, including projects I've been involved in, technologies I'm familiar with, and experiences I've gained throughout my professional career. From web applications to artificial intelligence systems, my goal is to create solutions that drive progress and improve people's lives."
 >
+  <main class="px-4">
+    <Section id="home" class="py-10 pd-22 md:py-40">
+      <div class="flex gap-4 mt-10 flex-wrap">
+        <img
+          class="rounded-full size-20 mb-10 shadow-2xl shadow-white/10"
+          src="JmFoto/asvgl.webp"
+          alt="Jordy"
+        /><a
+          href="https://www.linkedin.com/in/jordy-montero-murillo-6b36a8159"
+          target="_blank"
+          rel="noopener"
+          class="px-10 flex justify-center items-center"
+          ><Badge>Open To Work</Badge></a
+        >
+      </div>
+      <h1
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flew-row gap-x-4 pb-6 lg:pb-4"
+      >
+        Hi, I'm Jordy
+      </h1>
+      <h2 class="mt-8 text-lg lg:text-xl max-w-[700px] opacity-80 text-pretty">
+        +3 years of experience. <span class="text-blue-500 md:text-red-500"
+          >Systems Engineer and Developer</span
+        >. From Quito, Ecuador 🇪🇨. Specialized in creating and maintaining <span
+          class="text-yellow-400">quality</span
+        > applications.
+      </h2>
+      <nav class="flex gap-4 mt-10 flex-wrap">
+        <RedesSociales
+          href="https://www.linkedin.com/in/jordy-montero-murillo-6b36a8159"
+        >
+          <LinkedIn class="size-4 md:size-6" />
+          LinkedIn
+        </RedesSociales>
+        <RedesSociales href="https://github.com/Jordy714">
+          <Github class="size-4 md:size-6" />
+          Github
+        </RedesSociales>
+        <RedesSociales href="mailto:jordimontero01@gmail.com">
+          <Mail class="size-4 md:size-6" />
+          Contact Me
+        </RedesSociales>
+        <RedesSociales
+          href="public/CV/Resume_Jordy_Montero.pdf"
+          download="Resume_Jordy_Montero.pdf"
+        >
+          <CV class="size-4 md:size-6" />
+          CV</RedesSociales
+        >
+      </nav>
+    </Section>
 
-	<main class="px-4">
-		<Section id="home" class="py-10 pd-22 md:py-40">
-			<div class="flex gap-4 mt-10 flex-wrap">
-				<img
-					class="rounded-full size-20 mb-10 shadow-2xl shadow-white/10"
-					src="JmFoto/asvgl.webp"
-					alt="Jordy"
-				/><a
-					href="https://www.linkedin.com/in/jordy-montero-murillo-6b36a8159"
-					target="_blank"
-					rel="noopener"
-					class="px-10 flex justify-center items-center"
-					><Badge>Open To Work</Badge></a
-				>
-			</div>
-			<h1
-				class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flew-row gap-x-4 pb-6 lg:pb-4"
-			>
-			Hi, I'm Jordy
-			</h1>
-			<h2
-				class="mt-8 text-lg lg:text-xl max-w-[700px] opacity-80 text-pretty"
-			>
-				+3 years of experience. <span
-					class="text-blue-500 md:text-red-500"
-					>Systems Engineer and Developer</span
-				>. From Quito, Ecuador 🇪🇨. Specialized in creating and maintaining <span class="text-yellow-400">quality</span> applications.
-			</h2>
-			<nav class="flex gap-4 mt-10 flex-wrap">
-				<RedesSociales
-					href="https://www.linkedin.com/in/jordy-montero-murillo-6b36a8159"
-				>
-					<LinkedIn class="size-4 md:size-6" />
-					LinkedIn
-				</RedesSociales>
-				<RedesSociales href="https://github.com/Jordy714">
-					<Github class="size-4 md:size-6" />
-					Github
-				</RedesSociales>
-				<RedesSociales href="mailto:jordimontero01@gmail.com">
-					<Mail class="size-4 md:size-6" />
-					Contact Me
-				</RedesSociales>
-				<RedesSociales
-					href="public/CV/Resume_Jordy_Montero.pdf"
-					download="Resume_Jordy_Montero.pdf"
-				>
-					<CV class="size-4 md:size-6"/>
-					CV</RedesSociales
-					
-				>
-			</nav>
-		</Section>
+    <Section id="experience">
+      <h2 class="text-2xl font-semibold mb-10 mt-20 flex gap-x-3 items-center">
+        <Case class="size-8" />
+        Work Experience
+      </h2>
+      <Experience />
+    </Section>
+    <Section id="projects">
+      <h2 class="text-2xl font-semibold mb-20 mt-40 flex gap-x-3 items-center">
+        <Code class="size-8" />
+        Projects
+      </h2>
+      <Proyectos />
+    </Section>
+    <Section id="skills">
+      <h2 class="text-2xl font-semibold mb-20 mt-40 flex gap-x-3 items-center">
+        <Conocimiento class="size-8" />
+        Skills
+      </h2>
+      <Conocimientos />
+    </Section>
 
-		<Section id="experience">
-			<h2
-				class="text-2xl font-semibold mb-10 mt-20 flex gap-x-3 items-center"
-			>
-				<Case class="size-8" />
-				Work Experience
+    <Section
+      id="publications"
+      class="section undefined scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl mt-40"
+    >
+      <h2 class="text-2xl font-semibold mb-20 mt-40 flex gap-x-3 items-center">
+        <Publications class="size-8" />
+        Publications
+      </h2>
+      <Publicaciones />
+    </Section>
 
-			</h2>
-			<Experience />
-		</Section>
-		<Section id="projects">
-			<h2
-				class="text-2xl font-semibold mb-20 mt-40 flex gap-x-3 items-center"
-			>
-				<Code class="size-8" />
-				Projects
-			</h2>
-			<Proyectos />
-		</Section>
-		<Section id="skills">
-			<h2
-				class="text-2xl font-semibold mb-20 mt-40 flex gap-x-3 items-center"
-			>
-				<Conocimiento class="size-8" />
-				Skills
-			</h2>
-			<Conocimientos />
-		</Section>
-		<Section
-			id="sobre-mi"
-			data-section="about-me"
-			class="section undefined scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl mt-40"
-		>
-			<h2
-				class="text-2xl font-semibold mb-20 mt-40 flex gap-x-3 items-center"
-			>
-				<SobreJItem class="size-8" />
-				About me
-			</h2>
-			<SobreJ />
-		</Section>
-	</main>
+    <Section
+      id="about-me"
+      class="section undefined scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl mt-40"
+    >
+      <h2 class="text-2xl font-semibold mb-20 mt-40 flex gap-x-3 items-center">
+        <SobreJItem class="size-8" />
+        About me
+      </h2>
+      <SobreJ />
+    </Section>
+  </main>
 </Layout>
